@@ -5,6 +5,9 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.12.0"
   },
+  "scripts": {
+    "dev": "lite-server"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "author": "Harry Manchanda",
