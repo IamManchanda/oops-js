@@ -22,7 +22,7 @@ class Circle extends Shape {
 class Square extends Shape {
   constructor(size, color) {
     super(color);
-    this.radius = radius;
+    this.size = size;
   }
   center() {
     return 'Center'; 

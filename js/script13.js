@@ -1,4 +1,3 @@
-// Vintage JavaScript
 const extendParent = (child, parent) => {
   child.prototype = Object.create(parent.prototype);
   child.prototype.constructor = child;
@@ -16,8 +15,8 @@ const Circle = function (radius, color) {
   this.radius = radius;
 };
 extendParent(Circle, Shape);
-Circle.prototype.draw = function () {
-  return 'Draw'; 
+Circle.prototype.duplicate = function () {
+  return 'Duplicate Circle'; 
 };
 
 const Square = function (size, color) {
@@ -25,9 +24,17 @@ const Square = function (size, color) {
   this.size = size;
 };
 extendParent(Square, Shape);
-Square.prototype.center = function () {
-  return 'Center'; 
+Square.prototype.duplicate = function () {
+  return 'Duplicate Square'; 
 };
 
-const c = new Circle(1, 'red');
-const s = new Square(10, 'red');
+const shapes = [
+  new Circle(1, 'red'),
+  new Square(10, 'red'),
+];
+
+/* eslint-disable no-restricted-syntax */
+for (const currentShape of shapes) {
+  const loopDuplicates = currentShape.duplicate();
+  console.log(loopDuplicates);
+}
