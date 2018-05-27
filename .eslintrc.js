@@ -6,9 +6,10 @@ module.exports = {
   extends: 'airbnb-base',
   rules: {
     // Personal Preferences below ... proffessionally may change 
-    'prefer-const': 0, // Starting with `let` in Value types (Primitives) and `const` for Reference types.
     'arrow-body-style': 0, // Love Arrow Functions but not a fan of single liner functions!
     'func-names': 0, // Mainly for old school constructor functions
+    'no-underscore-dangle': 0, // Preference for using Private Properties through ES6 Symbols in an Object
+    'symbol-description': 0, // Preference for using Private Properties through ES6 Symbols in an Object
     'no-unused-vars': 0,
     'no-undef': 0,
     'no-trailing-spaces': 0,
